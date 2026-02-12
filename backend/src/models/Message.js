@@ -1,14 +1,6 @@
-import mongoose, { Schema, type Document } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
-export interface IMessage extends Document {
-  chat: mongoose.Types.ObjectId;
-  sender: mongoose.Types.ObjectId;
-  text: string;
-  createdAt: Date;
-  updatedAt: Date;
-}
-
-const MessageSchema = new Schema<IMessage>(
+const MessageSchema = new Schema(
   {
     chat: {
       type: Schema.Types.ObjectId,
@@ -29,8 +21,6 @@ const MessageSchema = new Schema<IMessage>(
   { timestamps: true }
 );
 
-
 MessageSchema.index({ chat: 1, createdAt: 1 }); // oldest one first
-
 
 export const Message = mongoose.model("Message", MessageSchema);
