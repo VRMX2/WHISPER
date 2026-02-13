@@ -1,10 +1,14 @@
-import {View,Text} from "react-native";
+import {View,Text,ScrollView} from "react-native";
+
 
 const ProfileTab = () =>{
-    return(
-        <View>
-               <Text>profile tab</Text>
-        </View>
+     return(
+        <ScrollView 
+            className="bg-surface"
+            contentInsetAdjustmentBehavior="automatic" 
+        >
+               <Text className= "text-white">Profile tab</Text>
+        </ScrollView>
     )
 }
 

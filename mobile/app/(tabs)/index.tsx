@@ -1,10 +1,13 @@
-import {View,Text} from "react-native";
+import {View,Text,ScrollView} from "react-native";
 
 const ChatsTab = () =>{
     return(
-        <View>
-               <Text>chat tab</Text>
-        </View>
+        <ScrollView 
+            className="bg-surface"
+            contentInsetAdjustmentBehavior="automatic" 
+        >
+               <Text className= "text-white">chat tab</Text>
+        </ScrollView>
     )
 }
 
