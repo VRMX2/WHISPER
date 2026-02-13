@@ -1,11 +1,11 @@
 import {View,Text} from "react-native";
 
-const AuthScreen= () =>{
+const ProfileTab = () =>{
     return(
         <View>
-               <Text>AuthScreen</Text>
+               <Text>profile tab</Text>
         </View>
     )
 }
 
-export default AuthScreen;
+export default ProfileTab;
